@@ -8,8 +8,10 @@ Group:          Applications/System
 License:        Apache-2.0
 URL:            https://github.com/containers/%{name}
 Source:         https://github.com/containers/%{name}/archive/refs/tags/v%{version}.tar.gz
-BuildRequires:  golang gpgme-devel libassuan-devel go-md2man
+BuildRequires:  golang gpgme-devel libassuan-devel go-md2man git-core glib2-devel make shadow-utils-subid-devel
 Requires:       gpgme
+Requires:       containers-common >= 4:1-21
+Recommends:     bats
 
 %if 0%{?rhel} >= 9
 BuildRequires:  btrfs-progs-devel
