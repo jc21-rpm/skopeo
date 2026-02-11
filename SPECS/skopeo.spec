@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:           skopeo
-Version:        1.21.0
+Version:        1.22.0
 Release:        1%{?dist}
 Summary:        Work with remote images registries - retrieving information, images, signing content
 Group:          Applications/System
@@ -63,6 +63,9 @@ install -Dm0644 default.yaml %{buildroot}%{_sysconfdir}/containers/registries.d/
 %doc LICENSE README.md
 
 %changelog
+* Thu Feb 12 2026 Jamie Curnow <jc@jc21.com> 1.22.0-1
+- v1.22.0
+
 * Thu Dec 4 2025 Jamie Curnow <jc@jc21.com> 1.21.0-1
 - v1.21.0
 
