@@ -1,13 +1,13 @@
 %define debug_package %{nil}
 
 Name:           skopeo
-Version:        1.24.0
+Version:        1.24.1
 Release:        1%{?dist}
 Summary:        Work with remote images registries - retrieving information, images, signing content
 Group:          Applications/System
 License:        Apache-2.0
-URL:            https://github.com/containers/%{name}
-Source:         https://github.com/containers/%{name}/archive/refs/tags/v%{version}.tar.gz
+URL:            https://github.com/podman-container-tools/%{name}
+Source:         https://github.com/podman-container-tools/%{name}/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:  golang gpgme-devel libassuan-devel go-md2man git-core glib2-devel make shadow-utils-subid-devel
 Requires:       gpgme
 Requires:       containers-common >= 4:1-21
@@ -63,6 +63,9 @@ install -Dm0644 default.yaml %{buildroot}%{_sysconfdir}/containers/registries.d/
 %doc LICENSE README.md
 
 %changelog
+* Thu Sep 17 2026 Jamie Curnow <jc@jc21.com> 1.24.1-1
+- v1.24.1
+
 * Fri Jul 31 2026 Jamie Curnow <jc@jc21.com> 1.24.0-1
 - v1.24.0
 
